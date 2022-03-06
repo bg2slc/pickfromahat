@@ -59,9 +59,20 @@ int main()
 		cout << usedTraits[i] << endl;
 	}
 	
+	while(true)
+	{
+		char cmd = promptCMD("Enter Command [P]ick, [A]dd, [S]ave, [E]xit\n");
+		switch (cmd)
+		{
+			case 'P':
+				//Select three random newTraits, allow user to pick, then move
+				//to used.
+		}
+
+	}
 	//string test = promptCMD("Enter anything you want to be in caps");
 	//cout << "we got " << test;
-//	promptStr("type exit to exit.");
+	//	promptStr("type exit to exit.");
 	exit(0);
 }
 
@@ -75,9 +86,9 @@ string promptStr(string promptMsg)
 	return input;
 }
 
-string promptCMD(string promptMsg)
+char promptCMD(string promptMsg)
 {
-	return toup(promptStr(promptMsg));
+	return toup(promptStr(promptMsg))[0];
 }
 
 
