@@ -88,17 +88,6 @@ string promptStr(string promptMsg)
 
 char promptCMD(string promptMsg)
 {
-	return toup(promptStr(promptMsg))[0];
+	return toupper(promptStr(promptMsg)[0]);
 }
 
-
-// Converts string to caps
-string toup(string str)
-{
-	cout << str << " is my string" << endl;
-	for (int i = 0; i < str.length(); i++) {
-		str[i] = toupper(str[i]);
-		cout << str[i];
-	}
-	return str;
-}
